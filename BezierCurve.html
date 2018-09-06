@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>贝塞尔曲线canvas</title>
+    <style media="screen">
+      #canvas {
+        border: #333 5px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="550" height="350"></canvas>
+    <script type="text/javascript">
+      let canvas = document.querySelector('#canvas');
+      let context = canvas.getContext('2d');
+
+      context.moveTo(50, 130);
+      context.quadraticCurveTo(200, 400, 490, 100);
+      context.closePath();
+
+      context.lineWidth = 15;
+      context.strokeStyle = "#FFCC00";
+
+      context.stroke();
+    </script>
+  </body>
+</html>

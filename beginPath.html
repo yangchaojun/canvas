@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>beginPath</title>
+    <style media="screen">
+      #canvas {
+        border: #333 5px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="550" height="350"></canvas>
+    <script type="text/javascript">
+      let canvas = document.querySelector('#canvas');
+      let context = canvas.getContext('2d');
+
+      // first sharp
+      context.beginPath();
+      context.moveTo(160, 130);
+      context.lineTo(75, 200);
+      context.lineTo(150, 275);
+      context.lineTo(250, 230);
+      context.closePath();
+
+      context.lineWidth = 5;
+      context.strokeStyle = "#333";
+      context.fillStyle = "#FFCC00";
+
+      context.fill();
+      context.stroke();
+
+      // second sharp
+      context.beginPath();
+      context.moveTo(50, 50);
+      context.lineTo(450, 300);
+
+      context.lineWidth = 45;
+      context.strokeStyle = "steelblue";
+
+      context.stroke();
+    </script>
+  </body>
+</html>

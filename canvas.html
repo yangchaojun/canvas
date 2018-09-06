@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Example</title>
+    <style media="screen">
+      #canvas {
+        border: #333 10px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="550" height="350"></canvas>
+
+    <script type="text/javascript">
+      let oCanvas = document.querySelector('#canvas');
+      console.log(oCanvas)
+      let ctx= oCanvas.getContext('2d');
+      console.log(ctx)
+      // draw a diagonal line
+      ctx.moveTo(160, 130);
+      ctx.lineTo(75, 200);
+      ctx.lineTo(150, 275);
+      ctx.lineTo(250, 230);
+      ctx.closePath();
+
+
+      // specify what our line looks like
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = "#333";
+      ctx.fillStyle = "#FFCC00";
+
+      ctx.fill();
+
+      // get the line drawn to the canvas
+      ctx.stroke();
+    </script>
+  </body>
+</html>
