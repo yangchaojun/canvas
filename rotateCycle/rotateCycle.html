@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #canvas {
+        margin: 30px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+    <canvas id="canvas" width="500" height="500"></canvas>
+  </body>
+  <script type="text/javascript">
+    const canvas = document.querySelector('#canvas');
+    console.log(canvas)
+    const ctx = canvas.getContext('2d');
+
+    const list = document.querySelectorAll('li');
+    console.log(list)
+
+    for (let i = 0; i<list.length;i++) {
+       ctx.beginPath();
+      ctx.arc(150,150,20,0+45*i,45+15*i,false)
+      ctx.fillStyle = `rgb(${Math.floor(255-42.5*i)},${Math.floor(255-42.5*i)},0)`
+      ctx.fill()
+    }
+    ctx.arc
+  </script>
+</html>
