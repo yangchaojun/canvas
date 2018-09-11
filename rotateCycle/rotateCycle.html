@@ -32,10 +32,15 @@
 
     for (let i = 0; i<list.length;i++) {
        ctx.beginPath();
-      ctx.arc(150,150,20,0+45*i,45+15*i,false)
-      ctx.fillStyle = `rgb(${Math.floor(255-42.5*i)},${Math.floor(255-42.5*i)},0)`
+       ctx.moveTo(150,150)
+      ctx.arc(150,150,50,(Math.PI*45*i)/180,Math.PI*45*(i+1)/180,false)
+      ctx.closePath();
+      ctx.fillStyle = 'rgb(' + Math.floor(255-30.5*i) + ',' +
+                       Math.floor(255-30.5*i) + ',0)';
+      // ctx.fillStyle = 'red'
       ctx.fill()
     }
-    ctx.arc
+
+
   </script>
 </html>
